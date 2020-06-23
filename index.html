@@ -7,6 +7,7 @@
   <script src="/socket.io/socket.io.js"></script>
   <script src="./client.js"></script>
   <body>
+    <!-- Main Page -->
     <section id="main-page" style="display: grid;">
       <div id="main-page-header">
         <div class="page-title">Usef</div>
@@ -45,6 +46,7 @@
       <div id="main-page-footer"></div>
     </section>
 
+    <!-- Lobby Page -->
     <section id="lobby-page">
       <div id="lobby-page-header">
         <div class="page-title">Usef</div>
@@ -95,6 +97,7 @@
       <div id="lobby-page-footer"></div>
     </section>
 
+    <!-- Game Page -->
     <section id="game-page">
       <div id="game-page-players">
         <div id="game-page-players-list"></div>
@@ -107,7 +110,7 @@
       <div id="game-page-usef">
         <div>Timer:</div>
         <div id="game-page-player-turn"></div>
-        <button>Usef</button>
+        <button onclick="usef()">Usef</button>
         <button onclick="lockMove()">Lock-in</button>
         <div id="turn-error-messages"></div>
       </div>
