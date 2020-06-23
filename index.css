@@ -1,0 +1,131 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+section {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+/*
+    Main page
+*/
+
+#main-page {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:
+        ". header header ."
+        ". setup about ."
+        ". footer footer .";
+}
+
+#main-page > #main-page-header {
+    grid-area: header;
+}
+
+#main-page > #main-page-user-setup {
+    grid-area: setup;
+}
+
+#main-page > #main-page-game-description {
+    grid-area: about;
+}
+
+#main-page > #main-page-footer {
+    grid-area: footer;
+}
+
+.page-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-variant: small-caps;
+    font-size: 3em;
+    text-align: center;
+}
+
+/*
+    Lobby page
+*/
+
+#lobby-page {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:
+        ". header header ."
+        ". settings players ."
+        ". footer footer .";
+}
+
+#lobby-page > #lobby-page-header {
+    grid-area: header;
+}
+
+#lobby-page > #lobby-page-game-settings {
+    grid-area: settings;
+}
+
+#lobby-page > #lobby-page-player-list-container {
+    grid-area: players;
+}
+
+#lobby-page > #lobby-page-footer {
+    grid-area: footer;
+}
+
+/*
+    Game page
+*/
+
+#game-page {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 40% 30% 30%;
+    grid-template-areas:
+        "players players players players players"
+        ". deck usef discard ."
+        "hand hand hand hand hand";
+}
+
+#game-page > #game-page-players {
+    grid-area: players;
+}
+
+#game-page > #game-page-deck {
+    grid-area: deck;
+    display: flex;
+}
+
+#game-page > #game-page-usef {
+    grid-area: usef;
+    text-align: center;
+}
+
+#game-page > #game-page-discard {
+    grid-area: discard;
+    display: flex;
+}
+
+#game-page > #game-page-hand {
+    grid-area: hand;
+    display: flex;
+}
+
+.game-page-card {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    height: 80%;
+    text-align: center;
+    background-color: ivory;
+    padding: 5px;
+}
+
+.game-page-card:hover {
+    border: 5px solid aqua;
+    cursor: pointer;
+}
+
+.game-page-card-selected {
+    border: 5px solid gold;
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Yousef Online</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+  </head>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./client.js"></script>
+  <body>
+    <section id="main-page" style="display: grid;">
+      <div id="main-page-header">
+        <div class="page-title">Usef</div>
+      </div>
+
+      <div id="main-page-user-setup">
+        <input id="name-input"
+               type="text"
+               maxlength="20"
+               placeholder="Enter your name"
+               autocomplete="off"
+               autofocus>
+
+        <input id="join-private-game-input"
+               type="text"
+               placeholder="Invite Code"
+               autocomplete="off">
+
+        <button id="join-private-game-button"
+                onclick="joinPrivateGame()"
+        >
+          Join Private Game
+        </button>
+
+        <button id="create-private-game-button"
+                onclick="createPrivateGame()"
+        >
+          Create Private Game
+        </button>
+      </div>
+
+      <div id="main-page-game-description">
+        Game Description
+      </div>
+
+      <div id="main-page-footer"></div>
+    </section>
+
+    <section id="lobby-page">
+      <div id="lobby-page-header">
+        <div class="page-title">Usef</div>
+      </div>
+
+      <div id="lobby-page-game-settings">
+        <div>Game Settings</div>
+
+        <div>
+          Invite Code: <span id="invite-code"></span>
+        </div>
+
+        <label for="deck-type-list">Deck</label>
+        <select id="deck-type-list">
+          <option value="2">Jokers</option>
+          <option value="1">Standard</option>
+        </select>
+
+        <label for="turn-timer-list">Turn Time</label>
+        <select id="turn-timer-list">
+          <option value="30">30 seconds</option>
+          <option value="60">60 seconds</option>
+          <option value="90">90 seconds</option>
+          <option value="120">120 seconds</option>
+        </select>
+
+        <label for="min-usef-turn">Earliest Usef Turn</label>
+        <select id="min-usef-turn">
+          <option value="1">Turn 1</option>
+          <option value="2">Turn 2</option>
+          <option value="3">Turn 3</option>
+          <option value="4">Turn 4</option>
+          <option value="5">Turn 5</option>
+        </select>
+
+        <button id="start-game-button"
+                onclick="startGame()"
+        >
+          Start Game
+        </button>
+      </div>
+
+      <div id="lobby-page-player-list-container">
+        Players
+        <div id="lobby-page-player-list"></div>
+      </div>
+
+      <div id="lobby-page-footer"></div>
+    </section>
+
+    <section id="game-page">
+      <div id="game-page-players">
+        <div id="game-page-players-list"></div>
+      </div>
+
+      <div id="game-page-deck">
+        <div id="game-page-cards-left"></div>
+      </div>
+
+      <div id="game-page-usef">
+        <div>Timer:</div>
+        <div id="game-page-player-turn"></div>
+        <button>Usef</button>
+        <button onclick="lockMove()">Lock-in</button>
+        <div id="turn-error-messages"></div>
+      </div>
+
+      <div id="game-page-discard">
+        <div id="game-page-discard-top"></div>
+      </div>
+
+      <div id="game-page-hand">
+        <div id="game-page-player-hand"></div>
+      </div>
+    </section>
+  </body>
+</html>
