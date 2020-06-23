@@ -1,8 +1,17 @@
 var { Game, Player, Card, DeckType } = require('./game');
 
 var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+// var http = require('http').createServer(app);
+// var io = require('socket.io')(http);
+
+const PORT = process.env.PORT || 3000;
+const INDEX = '/index.html';
+
+const server = app
+    .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+    .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+var io = require('socket.io')(server);
 
 app.get('/index.css', function(req, res) {
   res.sendFile(__dirname + '/index.css');
@@ -340,10 +349,6 @@ io.on('connection', function(socket) {
       // @todo check if score is above the score limit
     }
   });
-});
-
-http.listen(3000, function() {
-  console.log('listening on *:3000');
 });
 
 // Testing
