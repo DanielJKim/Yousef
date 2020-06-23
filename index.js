@@ -4,15 +4,6 @@ var app = require('express')();
 // var http = require('http').createServer(app);
 // var io = require('socket.io')(http);
 
-const PORT = process.env.PORT || 3000;
-const INDEX = '/index.html';
-
-const server = app
-    .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
-    .listen(PORT, () => console.log(`Listening on ${PORT}`));
-
-var io = require('socket.io')(server);
-
 app.get('/index.css', function(req, res) {
   res.sendFile(__dirname + '/index.css');
 });
@@ -24,6 +15,15 @@ app.get('/client.js', function(req, res) {
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
+
+const PORT = process.env.PORT || 3000;
+const INDEX = '/index.html';
+
+const server = app
+  .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+var io = require('socket.io')(server);
 
 class User {
   /**
