@@ -33,3 +33,24 @@
     font-size: 3em;
     text-align: center;
 }
+
+#main-page-user-setup {
+    padding: 0 1em;
+}
+
+.main-page-user-setup-div {
+    width: 100%;
+    padding: 5px;
+}
+
+#name-input, #create-private-game-button {
+    width: 100%;
+}
+
+#join-private-game-input, #join-private-game-button {
+    width: 47.5%;
+}
+
+#join-private-game-input {
+    margin-right: 5%;
+}

@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
   <head>
-    <title>Yousef Online</title>
+    <title>Usef Online</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./index.css">
     <link rel="stylesheet" type="text/css" href="./main-page.css">
   </head>
@@ -15,39 +16,76 @@
       </div>
 
       <div id="main-page-user-setup">
-        <div>
-          <input id="name-input"
-                 type="text"
-                 maxlength="20"
-                 placeholder="Enter your name"
-                 autocomplete="off"
-                 autofocus>
-        </div>
-        
-        <div>
-          <input id="join-private-game-input"
-                type="text"
-                placeholder="Invite Code"
-                autocomplete="off">
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="main-page-user-setup-div">
+            <input id="name-input"
+                  class="form-control"
+                  type="text"
+                  maxlength="20"
+                  placeholder="Enter your name"
+                  autocomplete="off"
+                  autofocus>
+          </div>
+          
+          <div class="main-page-user-setup-div" style="display: flex;">
+            <input id="join-private-game-input"
+                  class="form-control"
+                  type="text"
+                  placeholder="Invite Code"
+                  autocomplete="off">
 
-          <button id="join-private-game-button"
-                  onclick="joinPrivateGame()"
-          >
-            Join Private Game
-          </button>
-        </div>
+            <button id="join-private-game-button"
+                    onclick="joinPrivateGame()"
+                    type="button"
+                    class="btn btn-secondary"
+            >
+              Join Private Game
+            </button>
+          </div>
 
-        <div>
-          <button id="create-private-game-button"
-                  onclick="createPrivateGame()"
-          >
-            Create Private Game
-          </button>
+          <div class="main-page-user-setup-div">
+            <button id="create-private-game-button"
+                    onclick="createPrivateGame()"
+                    type="button"
+                    class="btn btn-primary"
+            >
+              Create Private Game
+            </button>
+          </div>
         </div>
       </div>
 
       <div id="main-page-game-description">
-        Game Description
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <h5 class="card-title">How to play</h5>
+            <p class="card-text">The object of the game is to have the lowest sum of cards in your hand.</p>
+            <p class="card-text">Joker = 0, Ace = 1, Number card = number, Face card = 10.</p>
+            <p class="card-text">
+              Each turn, a player MUST do one of the following:
+            </p>
+            <p class="card-text">
+              1) Play a single card from their hand, and pick up the top card of the discard pile or the top card of the deck.
+            </p>
+            <p class="card-text">
+              2) Play a group of cards from their hand and pick up the top card of the discard pile or the top card of the deck.
+            </p>
+            <p class="card-text">
+              The group of cards must have the same face (e.g. two eights, three queens, etc.)
+              OR must be three or more cards of the same suit with consecutive face values (e.g. jack(11) queen(12) king(13), ace(1) two(2) three(3) four(4), etc.)
+            </p>
+            <p class="card-text">
+              3) Call "Usef" if they think they have the lowest sum of cards in hand.
+              If the player that called "Usef" has the lowest sum of cards in hand, he/she gets 0 points that round, while the other players score the sum in their respective hands.
+              If any player has the same/lower sum of cards in hand, the player that called "Usef" gets 30 points for the round and the other players score 0.
+            </p>
+            <p class="card-text">
+              The game ends when a player has reached the maximum amount of points.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div id="main-page-footer"></div>
