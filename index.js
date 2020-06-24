@@ -6,6 +6,10 @@ app.get('/index.css', function(req, res) {
   res.sendFile(__dirname + '/index.css');
 });
 
+app.get('/main-page.css', function(req, res) {
+  res.sendFile(__dirname + '/main-page.css');
+});
+
 app.get('/client.js', function(req, res) {
   res.sendFile(__dirname + '/client.js');
 });

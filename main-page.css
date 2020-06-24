@@ -1,0 +1,35 @@
+/*
+    Main page
+*/
+
+#main-page {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:
+        ". header header ."
+        ". setup about ."
+        ". footer footer .";
+}
+
+#main-page > #main-page-header {
+    grid-area: header;
+}
+
+#main-page > #main-page-user-setup {
+    grid-area: setup;
+}
+
+#main-page > #main-page-game-description {
+    grid-area: about;
+}
+
+#main-page > #main-page-footer {
+    grid-area: footer;
+}
+
+.page-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-variant: small-caps;
+    font-size: 3em;
+    text-align: center;
+}

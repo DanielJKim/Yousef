@@ -3,6 +3,7 @@
   <head>
     <title>Yousef Online</title>
     <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./main-page.css">
   </head>
   <script src="/socket.io/socket.io.js"></script>
   <script src="./client.js"></script>
@@ -14,29 +15,35 @@
       </div>
 
       <div id="main-page-user-setup">
-        <input id="name-input"
-               type="text"
-               maxlength="20"
-               placeholder="Enter your name"
-               autocomplete="off"
-               autofocus>
+        <div>
+          <input id="name-input"
+                 type="text"
+                 maxlength="20"
+                 placeholder="Enter your name"
+                 autocomplete="off"
+                 autofocus>
+        </div>
+        
+        <div>
+          <input id="join-private-game-input"
+                type="text"
+                placeholder="Invite Code"
+                autocomplete="off">
 
-        <input id="join-private-game-input"
-               type="text"
-               placeholder="Invite Code"
-               autocomplete="off">
+          <button id="join-private-game-button"
+                  onclick="joinPrivateGame()"
+          >
+            Join Private Game
+          </button>
+        </div>
 
-        <button id="join-private-game-button"
-                onclick="joinPrivateGame()"
-        >
-          Join Private Game
-        </button>
-
-        <button id="create-private-game-button"
-                onclick="createPrivateGame()"
-        >
-          Create Private Game
-        </button>
+        <div>
+          <button id="create-private-game-button"
+                  onclick="createPrivateGame()"
+          >
+            Create Private Game
+          </button>
+        </div>
       </div>
 
       <div id="main-page-game-description">
