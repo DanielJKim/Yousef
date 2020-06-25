@@ -35,15 +35,6 @@
     text-align: center;
 }
 
-.main-page-user-setup-div {
-    width: 100%;
-    padding: 5px;
-}
-
-#name-input, #create-private-game-button {
-    width: 100%;
-}
-
 #join-private-game-input, #join-private-game-button {
     width: 47.5%;
 }
