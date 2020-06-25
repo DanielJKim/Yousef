@@ -2,7 +2,7 @@
 
 #game-page {
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 40% 30% 30%;
+    grid-template-rows: 30% 35% 35%;
     grid-template-areas:
         "players players players players players"
         ". deck usef discard ."
@@ -33,14 +33,30 @@
     display: flex;
 }
 
+.card-pad {
+    width: 10em;
+    height: 14em;
+    background-color: darkgreen;
+    border-radius: 0.5em;
+    margin: auto;
+}
+
+#game-page-player-hand {
+    height: 14em;
+    background-color: darkgreen;
+    border-radius: 0.5em;
+    margin: auto;
+    display: flex;
+}
+
 .game-page-card {
     border: 1px solid black;
-    border-radius: 5px;
-    margin: 10px;
-    height: 80%;
+    border-radius: 0.5em;
+    margin: 2em 2em;
+    width: 6em;
+    height: 10em;
     text-align: center;
     background-color: ivory;
-    padding: 5px;
 }
 
 .game-page-card:hover {

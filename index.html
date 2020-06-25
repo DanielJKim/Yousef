@@ -171,19 +171,33 @@
       </div>
 
       <div id="game-page-deck">
-        <div id="game-page-cards-left"></div>
+        <div id="game-page-cards-left" class="card-pad"></div>
       </div>
 
       <div id="game-page-usef">
-        <div>Timer:</div>
-        <div id="game-page-player-turn"></div>
-        <button onclick="usef()">Usef</button>
-        <button onclick="lockMove()">Lock-in</button>
-        <div id="turn-error-messages"></div>
+        <div class="card" style="height: 100%;">
+          <div class="card-body">
+            <h5 id="game-page-player-turn"></h5>
+
+            <button type="button"
+                    class="btn btn-danger btn-block"
+                    onclick="usef()">
+              Usef
+            </button>
+
+            <button type="button"
+                    class="btn btn-primary btn-block"
+                    onclick="lockMove()">
+              Lock-in
+            </button>
+
+            <div id="turn-error-messages"></div>
+          </div>
+        </div>
       </div>
 
       <div id="game-page-discard">
-        <div id="game-page-discard-top"></div>
+        <div id="game-page-discard-top" class="card-pad"></div>
       </div>
 
       <div id="game-page-hand">

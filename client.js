@@ -300,22 +300,14 @@ function createCardBackElement() {
  * @param {Game} game The game to display.
  */
 function renderDeck(game) {
-  let numCardsInDeck = game.deck.length;
   let deckElement = document.getElementById('game-page-cards-left');
-  deckElement.style.margin = 'auto';
-  deckElement.style.padding = '10px';
-  deckElement.style.height = '70%';
-  deckElement.style.display = 'flex';
-  deckElement.style.borderRadius = '10px';
-  deckElement.style.backgroundColor = 'darkgreen';
-
   let deckCard = createCardBackElement();
   deckElement.appendChild(deckCard);
 
-  let deckNumCards = document.createElement('DIV');
-  deckNumCards.innerHTML = numCardsInDeck;
-  deckNumCards.style.position = 'absolute';
-  document.getElementById('game-page-deck').appendChild(deckNumCards);
+  // let numCardsInDeck = game.deck.length;
+  // let deckNumCards = document.createElement('DIV');
+  // deckNumCards.innerHTML = numCardsInDeck;
+  // document.getElementById('game-page-deck').appendChild(deckNumCards);
 }
 
 /**
@@ -325,12 +317,6 @@ function renderDeck(game) {
 function renderDiscardPile(game) {
   let discardPileTopCard = game.discardPile[game.discardPile.length - 1];
   let discardPileElement = document.getElementById('game-page-discard-top');
-  discardPileElement.style.margin = 'auto';
-  discardPileElement.style.padding = '10px';
-  discardPileElement.style.height = '70%';
-  discardPileElement.style.display = 'flex';
-  discardPileElement.style.borderRadius = '10px';
-  discardPileElement.style.backgroundColor = 'darkgreen';
   let cardElement = createCardElement(discardPileTopCard);
   discardPileElement.appendChild(cardElement);
 }
@@ -349,12 +335,6 @@ function renderHand(game) {
     let cardDiv = createCardElement(c);
     playerHandDiv.appendChild(cardDiv);
   });
-  playerHandDiv.style.margin = 'auto';
-  playerHandDiv.style.padding = '10px';
-  playerHandDiv.style.height = '70%';
-  playerHandDiv.style.display = 'flex';
-  playerHandDiv.style.borderRadius = '10px';
-  playerHandDiv.style.backgroundColor = 'darkgreen';
 
   document.getElementById('game-page-hand').appendChild(playerHandDiv);
 }
