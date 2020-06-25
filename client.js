@@ -4,6 +4,7 @@ var USER_ID = -1;
 
 function createPrivateGame() {
   let nameInput = document.getElementById('name-input').value;
+  if (nameInput === null || nameInput === undefined || nameInput === '') return;
   socket.emit('create private lobby', nameInput);
 }
 
@@ -22,6 +23,7 @@ socket.on('user joined lobby', function(joinedUser) {
 
 function joinPrivateGame() {
   let nameInput = document.getElementById('name-input').value;
+  if (nameInput === null || nameInput === undefined || nameInput === '') return;
   let joinGameInviteCode = document.getElementById('join-private-game-input').value;
   socket.emit('join private lobby', nameInput, joinGameInviteCode);
 }
