@@ -1,0 +1,29 @@
+/*
+    Lobby page
+*/
+
+#lobby-page {
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:
+        ". header header ."
+        ". settings players ."
+        ". footer footer .";
+}
+
+#lobby-page > #lobby-page-header {
+    grid-area: header;
+}
+
+#lobby-page > #lobby-page-game-settings {
+    grid-area: settings;
+    padding: 0 1em;
+}
+
+#lobby-page > #lobby-page-player-list-container {
+    grid-area: players;
+}
+
+#lobby-page > #lobby-page-footer {
+    grid-area: footer;
+}

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./index.css">
     <link rel="stylesheet" type="text/css" href="./main-page.css">
+    <link rel="stylesheet" type="text/css" href="./lobby-page.css">
   </head>
   <script src="/socket.io/socket.io.js"></script>
   <script src="./client.js"></script>
@@ -98,40 +99,62 @@
       </div>
 
       <div id="lobby-page-game-settings">
-        <div>Game Settings</div>
+        <div class="card">
+          <div class="card-header"></div>
+          <div class="card-body">
+            <h5 class="card-title">Game Settings</h5>
 
-        <div>
-          Invite Code: <span id="invite-code"></span>
+            <div class="form-group">
+              Invite Code: <b><span id="invite-code"></span></b>
+            </div>
+
+            <div class="form-group">
+              <label for="deck-type-list">Deck Type</label>
+              <select id="deck-type-list" class="form-control">
+                <option value="2">Jokers</option>
+                <option value="1">Standard</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="turn-timer-list">Turn Time</label>
+              <select id="turn-timer-list" class="form-control">
+                <option value="30">30 seconds</option>
+                <option value="60">60 seconds</option>
+                <option value="90">90 seconds</option>
+                <option value="120">120 seconds</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="min-usef-turn">Usef Turn</label>
+              <select id="min-usef-turn" class="form-control">
+                <option value="1">Turn 1</option>
+                <option value="2">Turn 2</option>
+                <option value="3">Turn 3</option>
+                <option value="4">Turn 4</option>
+                <option value="5">Turn 5</option>
+              </select>
+            </div>
+
+            <button id="start-game-button"
+                    type="button"
+                    class="btn btn-success btn-block"
+                    onclick="startGame()">
+              Start Game
+            </button>
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+          
         </div>
-
-        <label for="deck-type-list">Deck</label>
-        <select id="deck-type-list">
-          <option value="2">Jokers</option>
-          <option value="1">Standard</option>
-        </select>
-
-        <label for="turn-timer-list">Turn Time</label>
-        <select id="turn-timer-list">
-          <option value="30">30 seconds</option>
-          <option value="60">60 seconds</option>
-          <option value="90">90 seconds</option>
-          <option value="120">120 seconds</option>
-        </select>
-
-        <label for="min-usef-turn">Earliest Usef Turn</label>
-        <select id="min-usef-turn">
-          <option value="1">Turn 1</option>
-          <option value="2">Turn 2</option>
-          <option value="3">Turn 3</option>
-          <option value="4">Turn 4</option>
-          <option value="5">Turn 5</option>
-        </select>
-
-        <button id="start-game-button"
-                onclick="startGame()"
-        >
-          Start Game
-        </button>
       </div>
 
       <div id="lobby-page-player-list-container">

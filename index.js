@@ -10,13 +10,17 @@ app.get('/main-page.css', function(req, res) {
   res.sendFile(__dirname + '/main-page.css');
 });
 
+app.get('/lobby-page.css', function(req, res) {
+  res.sendFile(__dirname + '/lobby-page.css');
+});
+
 app.get('/client.js', function(req, res) {
   res.sendFile(__dirname + '/client.js');
 });
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
-});
+// app.get('/', function(req, res) {
+//   res.sendFile(__dirname + '/index.html');
+// });
 
 const PORT = process.env.PORT || 3000;
 const INDEX = '/index.html';
