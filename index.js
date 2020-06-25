@@ -14,13 +14,13 @@ app.get('/lobby-page.css', function(req, res) {
   res.sendFile(__dirname + '/lobby-page.css');
 });
 
+app.get('/game-page.css', function(req, res) {
+  res.sendFile(__dirname + '/game-page.css');
+});
+
 app.get('/client.js', function(req, res) {
   res.sendFile(__dirname + '/client.js');
 });
-
-// app.get('/', function(req, res) {
-//   res.sendFile(__dirname + '/index.html');
-// });
 
 const PORT = process.env.PORT || 3000;
 const INDEX = '/index.html';
