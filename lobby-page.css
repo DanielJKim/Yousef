@@ -20,7 +20,7 @@
     padding: 0 1em;
 }
 
-#lobby-page > #lobby-page-player-list-container {
+#lobby-page > #lobby-page-player-list-section {
     grid-area: players;
 }
 

@@ -183,9 +183,12 @@ function displayLobby(lobby) {
   document.getElementById('lobby-page-player-list-container').appendChild(playerListDiv);
   lobby.users.forEach((u) => {
     let newDiv = document.createElement('DIV');
-    newDiv.innerHTML = u.name;
+    newDiv.innerHTML = u.name + ' ';
     if (lobby.hostid === u.id) {
-      newDiv.style = 'border: 1px solid red;';
+      let hostBadge = document.createElement('SPAN');
+      hostBadge.className = 'badge badge-warning';
+      hostBadge.innerHTML = 'Host';
+      newDiv.appendChild(hostBadge);
     }
     document.getElementById('lobby-page-player-list').appendChild(newDiv);
   });

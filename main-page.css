@@ -17,6 +17,7 @@
 
 #main-page > #main-page-user-setup {
     grid-area: setup;
+    padding: 0 1em;
 }
 
 #main-page > #main-page-game-description {
@@ -32,10 +33,6 @@
     font-variant: small-caps;
     font-size: 3em;
     text-align: center;
-}
-
-#main-page-user-setup {
-    padding: 0 1em;
 }
 
 .main-page-user-setup-div {
