@@ -57,13 +57,29 @@
     height: 10em;
     text-align: center;
     background-color: ivory;
+
+    /* Disable text selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .game-page-card:hover {
-    border: 5px solid aqua;
+    border: 1px solid lightslategray;
+    background-color: aliceblue;
     cursor: pointer;
 }
 
 .game-page-card-selected {
-    border: 5px solid gold;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+}
+
+.game-page-card-selected:hover {
+    border: 1px solid aliceblue;
+    background-color: lightslategray;
+    cursor: pointer;
 }
