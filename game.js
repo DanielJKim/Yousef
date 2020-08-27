@@ -29,19 +29,27 @@ class Game {
   */
   round = 0;
 
-  /**
-  * @type number
-  * @description The maximum number of seconds a turn can take.
-  */
-  turnTime;
-
-  /**
-  * @type number
-  * @description The number of cards each player starts with.
-  */
-  numInitCards;
-
   constructor() {
+  }
+
+  get players() {
+    return this.players;
+  }
+
+  get deck() {
+    return this.deck;
+  }
+
+  get discardPile() {
+    return this.discardPile;
+  }
+
+  get playerTurn() {
+    return this.playerTurn;
+  }
+
+  get round() {
+    return this.round;
   }
 
   /**
